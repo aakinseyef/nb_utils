@@ -222,11 +222,14 @@ Future<ThemeData> getMaterialYouTheme() async {
   Map colors = await getMaterialYouColors();
 
   if (colors.isEmpty) {
-    return ThemeData(useMaterial3: true, useSystemColors: true);
+    return ThemeData(
+      useMaterial3: true, 
+      //useSystemColors: true
+    );
   } else {
     return ThemeData(
       useMaterial3: true,
-      useSystemColors: true,
+      //useSystemColors: true,
       colorSchemeSeed: colors['system_accent1_100'].toString().toColor(),
     );
   }
